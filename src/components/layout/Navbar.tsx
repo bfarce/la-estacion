@@ -43,7 +43,7 @@ export function Navbar() {
             height={136}
             className={cn(
               "w-auto shrink-0 object-contain transition-all duration-500 drop-shadow-[0_4px_14px_oklch(0_0_0/0.55)]",
-              scrolled ? "h-11" : "h-14 sm:h-16",
+              scrolled ? "h-12 sm:h-14" : "h-16 sm:h-20",
             )}
           />
           <span className="sr-only">{SITE.nombre}</span>
