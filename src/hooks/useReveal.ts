@@ -19,7 +19,10 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>(delay = 0) {
       { threshold: 0.15, rootMargin: "0px 0px -60px 0px" },
     );
     obs.observe(el);
-    return () => obs.disconnect();
+    return () => {
+      window.clearTimeout(timer);
+      obs.disconnect();
+    };
   }, [delay]);
 
   return { ref, className: visible ? "reveal reveal-visible" : "reveal" };
