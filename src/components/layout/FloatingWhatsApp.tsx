@@ -1,10 +1,11 @@
 import { MessageCircle } from "lucide-react";
-import { MENSAJES, whatsappUrl } from "@/config/site";
+import { MENSAJES, externalClick, whatsappUrl } from "@/config/site";
 
 export function FloatingWhatsApp() {
   return (
     <a
       href={whatsappUrl(MENSAJES.asesor)}
+      onClick={externalClick(whatsappUrl(MENSAJES.asesor))}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Hablar con un asesor por WhatsApp"

@@ -1,6 +1,6 @@
 import { MessageCircle } from "lucide-react";
 import type { Producto } from "@/types/catalog";
-import { MENSAJES, whatsappUrl } from "@/config/site";
+import { MENSAJES, externalClick, whatsappUrl } from "@/config/site";
 import { useReveal } from "@/hooks/useReveal";
 
 const formatoCOP = new Intl.NumberFormat("es-CO", {
@@ -52,6 +52,7 @@ export function ProductoCard({ producto, index = 0 }: { producto: Producto; inde
 
         <a
           href={whatsappUrl(MENSAJES.producto(producto.nombre))}
+          onClick={externalClick(whatsappUrl(MENSAJES.producto(producto.nombre)))}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-5 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full border border-whatsapp/45 bg-whatsapp/10 text-sm font-medium text-whatsapp transition-all duration-400 hover:bg-whatsapp hover:text-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"

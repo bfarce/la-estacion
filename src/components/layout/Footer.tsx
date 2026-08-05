@@ -1,5 +1,6 @@
 import { Clock, Facebook, Instagram, Mail, MapPin, MessageCircle, Phone, Wine } from "lucide-react";
-import { MENSAJES, SITE, whatsappUrl } from "@/config/site";
+import { MENSAJES, SITE, externalClick, whatsappUrl } from "@/config/site";
+import { TikTokIcon } from "@/components/ui/tiktok-icon";
 
 const LINKS = [
   { label: "Inicio", href: "#inicio" },
@@ -22,9 +23,10 @@ export function Footer() {
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
             {SITE.eslogan}. Atención al detal y al por mayor con despacho a todo el país.
           </p>
-          <div className="mt-6 flex gap-3">
+          <div className="mt-6 flex flex-wrap gap-3">
             <a
               href={SITE.redes.instagram}
+              onClick={externalClick(SITE.redes.instagram)}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -34,6 +36,7 @@ export function Footer() {
             </a>
             <a
               href={SITE.redes.facebook}
+              onClick={externalClick(SITE.redes.facebook)}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -42,7 +45,18 @@ export function Footer() {
               <Facebook className="h-4 w-4" aria-hidden="true" />
             </a>
             <a
+              href={SITE.redes.tiktok}
+              onClick={externalClick(SITE.redes.tiktok)}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TikTok"
+              className="grid h-10 w-10 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:border-gold hover:text-gold"
+            >
+              <TikTokIcon className="h-4 w-4" aria-hidden="true" />
+            </a>
+            <a
               href={whatsappUrl(MENSAJES.asesor)}
+              onClick={externalClick(whatsappUrl(MENSAJES.asesor))}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"

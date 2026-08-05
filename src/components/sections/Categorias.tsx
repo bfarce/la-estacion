@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
 import { useReveal } from "@/hooks/useReveal";
 import { catalogKeys, getCategorias } from "@/services/catalogService";
-import { MENSAJES, whatsappUrl } from "@/config/site";
+import { MENSAJES, externalClick, whatsappUrl } from "@/config/site";
 
 export function Categorias() {
   const { data: categorias = [] } = useQuery({
@@ -47,6 +47,7 @@ function CategoriaCard({
     <li ref={reveal.ref} className={reveal.className}>
       <a
         href={whatsappUrl(MENSAJES.categoria(nombre))}
+        onClick={externalClick(whatsappUrl(MENSAJES.categoria(nombre)))}
         target="_blank"
         rel="noopener noreferrer"
         className="card-premium group relative flex h-40 flex-col justify-end overflow-hidden rounded-2xl p-5 sm:h-52 sm:p-7"
