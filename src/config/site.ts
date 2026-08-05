@@ -8,10 +8,10 @@ export const SITE = {
   nombre: "La Estación",
   eslogan: "Distribución premium de licores nacionales e importados",
   whatsapp: "573123526566", // solo dígitos, con código de país
-  email: "ventas@laestacion.com",
+  email: "laestacionpitalito2025@gmail.com",
   telefono: "+57 312 352 6566",
   direccion: "Carrera 15 # 19B 04 SUR, Pitalito",
-  horario: "Lun - Sáb: 9:00 a.m. - 10:00 p.m. · Dom: 11:00 a.m. - 8:00 p.m.",
+  horario: "Lun - Jue: 9:00 a.m. - 9:00 p.m. · Vie - Sáb y festivos: 10:00 a.m. - 12:00 a.m.",
   redes: {
     instagram: "https://instagram.com",
     facebook: "https://facebook.com",
