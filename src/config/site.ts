@@ -25,27 +25,19 @@ export function whatsappUrl(mensaje: string): string {
 }
 
 /**
- * Abre un enlace externo de forma confiable, incluso dentro de iframes
- * (preview) donde `target="_blank"` puede ser bloqueado.
+ * Abre un enlace externo en una pestaña nueva sin abandonar el sitio actual.
+ * Se usa como respaldo cuando el `target="_blank"` del anchor no es suficiente
+ * (por ejemplo, dentro de iframes o previews).
  */
 export function openExternal(url: string): void {
-  try {
-    const win = window.open(url, "_blank", "noopener,noreferrer");
-    if (win) return;
-  } catch {
-    /* ignorado: caemos al fallback */
-  }
-  try {
-    (window.top ?? window).location.href = url;
-  } catch {
-    window.location.href = url;
-  }
+  window.open(url, "_blank", "noopener,noreferrer");
 }
 
 /** Handler de click para enlaces externos (WhatsApp, redes sociales). */
 export function externalClick(url: string) {
   return (e: MouseEvent) => {
     e.preventDefault();
+    e.stopPropagation();
     openExternal(url);
   };
 }
