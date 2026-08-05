@@ -1,3 +1,5 @@
+import type { MouseEvent } from "react";
+
 /**
  * Configuración central del sitio.
  * Cambiar aquí el número de WhatsApp y los datos de contacto.
@@ -42,7 +44,7 @@ export function openExternal(url: string): void {
 
 /** Handler de click para enlaces externos (WhatsApp, redes sociales). */
 export function externalClick(url: string) {
-  return (e: React.MouseEvent) => {
+  return (e: MouseEvent) => {
     e.preventDefault();
     openExternal(url);
   };
