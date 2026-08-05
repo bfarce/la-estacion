@@ -77,13 +77,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Licorera Selecta | Licores premium al por mayor y al detal" },
+      { title: "La Estación | Licores premium al por mayor y al detal" },
       {
         name: "description",
         content:
-          "Distribuidora de licores nacionales e importados. Catálogo premium y cotización inmediata por WhatsApp.",
+          "Distribuidora de licores nacionales e importados en Pitalito. Catálogo premium y cotización inmediata por WhatsApp.",
       },
-      { property: "og:site_name", content: "Licorera Selecta" },
+      { property: "og:site_name", content: "La Estación" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#0F0F0F" },

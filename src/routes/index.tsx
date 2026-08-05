@@ -13,9 +13,9 @@ import { Faq } from "@/components/sections/Faq";
 import { CtaFinal } from "@/components/sections/CtaFinal";
 import { SITE } from "@/config/site";
 
-const TITLE = "Licorera Selecta | Licores al por mayor y al detal";
+const TITLE = "La Estación | Licores al por mayor y al detal en Pitalito";
 const DESCRIPTION =
-  "Catálogo premium de licores nacionales e importados. Whisky, ron, vodka, vinos y champañas al por mayor y al detal. Cotiza por WhatsApp en minutos.";
+  "Catálogo premium de licores nacionales e importados en Pitalito. Whisky, ron, vodka, vinos y champañas al por mayor y al detal. Cotiza por WhatsApp en minutos.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
