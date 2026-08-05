@@ -3,12 +3,6 @@ import type { Producto } from "@/types/catalog";
 import { MENSAJES, externalClick, whatsappUrl } from "@/config/site";
 import { useReveal } from "@/hooks/useReveal";
 
-const formatoCOP = new Intl.NumberFormat("es-CO", {
-  style: "currency",
-  currency: "COP",
-  maximumFractionDigits: 0,
-});
-
 export function ProductoCard({ producto, index = 0 }: { producto: Producto; index?: number }) {
   const reveal = useReveal<HTMLElement>(index * 60);
 
