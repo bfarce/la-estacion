@@ -46,8 +46,8 @@ export function Hero() {
               <MessageCircle className="h-5 w-5" aria-hidden="true" />
               Solicitar cotización
             </ActionButton>
-            <ActionButton href="#productos" variant="outline" size="lg">
-              Ver catálogo
+            <ActionButton href={whatsappUrl(MENSAJES.asesor)} variant="outline" size="lg">
+              Hablar con un asesor
             </ActionButton>
           </div>
 
