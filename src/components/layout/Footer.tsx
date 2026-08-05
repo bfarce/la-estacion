@@ -24,7 +24,7 @@ export function Footer() {
             className="h-24 w-auto object-contain sm:h-28"
           />
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
-            {SITE.eslogan}. Atención al detal y al por mayor con despacho a todo el país.
+            {SITE.eslogan}. Atención al detal y al por mayor con entregas coordinadas según disponibilidad.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a

@@ -23,8 +23,8 @@ export function ProductosDestacados() {
         <div ref={head.ref} className={head.className}>
           <SectionHeading
             eyebrow="Selección destacada"
-            title="Productos destacados"
-            description="Las referencias más solicitadas por nuestros clientes al detal y mayoristas."
+            title="Referencias que manejamos"
+            description="Consulta por las referencias más solicitadas; te confirmamos disponibilidad y precio por WhatsApp."
           />
         </div>
 
@@ -43,8 +43,8 @@ export function ProductosDestacados() {
         )}
 
         <div className="mt-14 text-center">
-          <ActionButton href={whatsappUrl(MENSAJES.catalogo)} variant="outline" size="lg">
-            Solicitar catálogo completo
+          <ActionButton href={whatsappUrl(MENSAJES.asesor)} variant="outline" size="lg">
+            Solicitar información por WhatsApp
           </ActionButton>
         </div>
       </div>

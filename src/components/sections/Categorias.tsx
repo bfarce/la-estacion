@@ -19,7 +19,7 @@ export function Categorias() {
           <SectionHeading
             eyebrow="Catálogo"
             title="Explora por categoría"
-            description="Una selección curada de destilados, cervezas y espumosos para consumo, eventos y distribución."
+            description="Una selección curada de destilados, cervezas y espumosos. Escríbenos por WhatsApp para confirmar disponibilidad."
           />
         </div>
 
