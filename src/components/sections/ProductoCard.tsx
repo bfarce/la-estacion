@@ -36,9 +36,10 @@ export function ProductoCard({ producto, index = 0 }: { producto: Producto; inde
         <p className="mt-1 text-xs uppercase tracking-[0.18em] text-muted-foreground">
           {producto.presentacion}
         </p>
-        <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-muted-foreground">
+        <p className="mt-3 mb-6 line-clamp-2 min-h-[2.6rem] text-sm leading-relaxed text-muted-foreground">
           {producto.descripcion}
         </p>
+
 
         <div className="mt-auto flex items-end justify-between gap-3 border-t border-border/70 pt-5">
           <div>
