@@ -87,6 +87,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#0F0F0F" },
+      { property: "og:title", content: "La Estación | Licores premium al por mayor y al detal" },
+      { name: "twitter:title", content: "La Estación | Licores premium al por mayor y al detal" },
+      { property: "og:description", content: "Distribuidora de licores nacionales e importados en Pitalito. Catálogo premium y cotización inmediata por WhatsApp." },
+      { name: "twitter:description", content: "Distribuidora de licores nacionales e importados en Pitalito. Catálogo premium y cotización inmediata por WhatsApp." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0d84b9e0-514d-4c52-a844-0cd14a6b67a4/id-preview-9f260f34--5fb50435-5842-4cc4-861b-308d3f54235c.lovable.app-1785897199539.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0d84b9e0-514d-4c52-a844-0cd14a6b67a4/id-preview-9f260f34--5fb50435-5842-4cc4-861b-308d3f54235c.lovable.app-1785897199539.png" },
     ],
     links: [
       {
