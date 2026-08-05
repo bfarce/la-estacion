@@ -45,13 +45,13 @@ export function externalClick(url: string) {
 const FIRMA = `Escribo desde la web de ${SITE.nombre}.`;
 
 export const MENSAJES = {
-  cotizacion: `Hola, buen día. ${FIRMA} Quisiera solicitar una cotización de licores. ¿Me pueden compartir precios y disponibilidad?`,
-  mayorista: `Hola, buen día. ${FIRMA} Estoy interesado en compras al por mayor para mi negocio. ¿Me pueden enviar la lista de precios mayoristas y condiciones de despacho?`,
+  cotizacion: `Hola, buen día. ${FIRMA} Quisiera solicitar una cotización de licores. ¿Me pueden confirmar disponibilidad y precio?`,
+  mayorista: `Hola, buen día. ${FIRMA} Estoy interesado en compras al por mayor para mi negocio. ¿Me pueden enviar información sobre condiciones comerciales y despacho?`,
   asesor: `Hola, buen día. ${FIRMA} Quisiera hablar con un asesor para recibir información sobre sus productos.`,
-  catalogo: `Hola, buen día. ${FIRMA} ¿Me pueden compartir el catálogo completo con precios actualizados?`,
+  catalogo: `Hola, buen día. ${FIRMA} Quisiera recibir información sobre las referencias que manejan y su disponibilidad.`,
   contacto: `Hola, buen día. ${FIRMA} Quisiera más información sobre sus productos y servicios.`,
   producto: (nombre: string) =>
-    `Hola, buen día. ${FIRMA} Me interesa el producto "${nombre}". ¿Me pueden confirmar precio, presentación y disponibilidad?`,
+    `Hola, buen día. ${FIRMA} Me interesa la referencia "${nombre}". ¿Me pueden confirmar disponibilidad, presentación y precio?`,
   categoria: (nombre: string) =>
-    `Hola, buen día. ${FIRMA} Quisiera conocer el catálogo y los precios de la categoría "${nombre}".`,
+    `Hola, buen día. ${FIRMA} Quisiera conocer las referencias disponibles de la categoría "${nombre}".`,
 } as const;
