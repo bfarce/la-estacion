@@ -1,6 +1,7 @@
-import { Clock, Facebook, Instagram, Mail, MapPin, MessageCircle, Phone, Wine } from "lucide-react";
+import { Clock, Facebook, Instagram, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import { MENSAJES, SITE, externalClick, whatsappUrl } from "@/config/site";
 import { TikTokIcon } from "@/components/ui/tiktok-icon";
+import logoAsset from "@/assets/logo-la-estacion.png.asset.json";
 
 const LINKS = [
   { label: "Inicio", href: "#inicio" },
@@ -14,12 +15,14 @@ export function Footer() {
     <footer className="border-t border-border/70 bg-surface">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 lg:grid-cols-4 lg:px-8">
         <div className="lg:col-span-2">
-          <div className="flex items-center gap-3">
-            <span className="grid h-10 w-10 place-items-center rounded-full border border-gold/40 bg-gold/10">
-              <Wine className="h-5 w-5 text-gold" aria-hidden="true" />
-            </span>
-            <span className="font-display text-xl tracking-wide text-foreground">{SITE.nombre}</span>
-          </div>
+          <img
+            src={logoAsset.url}
+            alt={`Logo de ${SITE.nombre} Licorera`}
+            width={320}
+            height={218}
+            loading="lazy"
+            className="h-24 w-auto object-contain sm:h-28"
+          />
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
             {SITE.eslogan}. Atención al detal y al por mayor con despacho a todo el país.
           </p>
