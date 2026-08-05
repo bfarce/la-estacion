@@ -7,7 +7,7 @@ import { useReveal } from "@/hooks/useReveal";
 
 const BENEFICIOS = [
   { icon: HandCoins, titulo: "Precios especiales", texto: "Escalas de descuento por volumen." },
-  { icon: Truck, titulo: "Distribución", texto: "Entregas programadas a nivel nacional." },
+  { icon: Truck, titulo: "Distribución", texto: "Entregas coordinadas según disponibilidad y zona." },
   { icon: Headset, titulo: "Atención personalizada", texto: "Un asesor asignado a tu negocio." },
   { icon: Boxes, titulo: "Grandes cantidades", texto: "Inventario disponible para pedidos altos." },
   { icon: Timer, titulo: "Cotización inmediata", texto: "Respuesta por WhatsApp en minutos." },
