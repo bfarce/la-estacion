@@ -8,12 +8,12 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>(delay = 0) {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    let timer = 0;
     const obs = new IntersectionObserver(
       ([entry]) => {
         if (entry?.isIntersecting) {
-          const t = window.setTimeout(() => setVisible(true), delay);
+          timer = window.setTimeout(() => setVisible(true), delay);
           obs.disconnect();
-          return () => window.clearTimeout(t);
         }
       },
       { threshold: 0.15, rootMargin: "0px 0px -60px 0px" },
