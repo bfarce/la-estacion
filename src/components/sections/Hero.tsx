@@ -46,8 +46,8 @@ export function Hero() {
               <MessageCircle className="h-5 w-5" aria-hidden="true" />
               Solicitar cotización
             </ActionButton>
-            <ActionButton href="#productos" variant="outline" size="lg">
-              Ver catálogo
+            <ActionButton href={whatsappUrl(MENSAJES.asesor)} variant="outline" size="lg">
+              Hablar con un asesor
             </ActionButton>
           </div>
 
@@ -57,8 +57,8 @@ export function Hero() {
           >
             {[
               { k: "+500", v: "Referencias" },
-              { k: "+12", v: "Años de trayectoria" },
-              { k: "24 h", v: "Despacho mayorista" },
+              { k: "100%", v: "Asesoría personalizada" },
+              { k: "24 h", v: "Cotización inmediata" },
             ].map((s) => (
               <div key={s.v}>
                 <dt className="font-display text-2xl text-gold sm:text-3xl">{s.k}</dt>

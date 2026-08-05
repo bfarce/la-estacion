@@ -14,11 +14,11 @@ const FAQS = [
   },
   {
     q: "¿Realizan domicilios?",
-    a: "Realizamos entregas el mismo día dentro de la zona urbana y despachos programados a nivel nacional para pedidos mayoristas.",
+    a: "Realizamos entregas coordinadas dentro de la zona urbana de Pitalito y despachos programados según disponibilidad y zona para pedidos mayoristas.",
   },
   {
     q: "¿Cómo solicito una cotización?",
-    a: "Pulsa cualquier botón de WhatsApp del sitio, indícanos los productos y cantidades, y un asesor te responde en minutos con precios y disponibilidad.",
+    a: "Pulsa cualquier botón de WhatsApp del sitio, indícanos los productos y cantidades, y un asesor te responde en minutos con disponibilidad y precio.",
   },
   {
     q: "¿Qué medios de pago aceptan?",

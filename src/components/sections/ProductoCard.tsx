@@ -3,12 +3,6 @@ import type { Producto } from "@/types/catalog";
 import { MENSAJES, externalClick, whatsappUrl } from "@/config/site";
 import { useReveal } from "@/hooks/useReveal";
 
-const formatoCOP = new Intl.NumberFormat("es-CO", {
-  style: "currency",
-  currency: "COP",
-  maximumFractionDigits: 0,
-});
-
 export function ProductoCard({ producto, index = 0 }: { producto: Producto; index?: number }) {
   const reveal = useReveal<HTMLElement>(index * 60);
 
@@ -40,22 +34,12 @@ export function ProductoCard({ producto, index = 0 }: { producto: Producto; inde
           {producto.descripcion}
         </p>
 
-
-        <div className="mt-auto flex items-end justify-between gap-3 border-t border-border/70 pt-5">
-          <div>
-            <p className="text-[0.65rem] uppercase tracking-[0.22em] text-muted-foreground">
-              Precio desde
-            </p>
-            <p className="font-display text-2xl text-gold">{formatoCOP.format(producto.precio)}</p>
-          </div>
-        </div>
-
         <a
           href={whatsappUrl(MENSAJES.producto(producto.nombre))}
           onClick={externalClick(whatsappUrl(MENSAJES.producto(producto.nombre)))}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-5 inline-flex h-12 w-full items-center justify-center gap-2 rounded-full border border-whatsapp/45 bg-whatsapp/10 text-sm font-medium text-whatsapp transition-all duration-400 hover:bg-whatsapp hover:text-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          className="mt-auto inline-flex h-12 w-full items-center justify-center gap-2 rounded-full border border-whatsapp/45 bg-whatsapp/10 text-sm font-medium text-whatsapp transition-all duration-400 hover:bg-whatsapp hover:text-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
         >
           <MessageCircle className="h-4 w-4" aria-hidden="true" />
           Consultar por WhatsApp
