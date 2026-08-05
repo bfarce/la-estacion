@@ -63,10 +63,10 @@ export function Mayoristas() {
               Pedidos mayoristas
             </p>
             <h3 className="mt-4 font-display text-3xl leading-snug text-foreground">
-              Cotiza tu pedido hoy y despachamos en 24 horas
+              Cotiza tu pedido hoy y recibe una propuesta personalizada
             </h3>
             <p className="mt-4 text-sm text-muted-foreground">
-              Envíanos tu lista de productos y recibe una propuesta comercial personalizada.
+              Envíanos tu lista de productos y te confirmamos disponibilidad, precio y tiempos de entrega.
             </p>
             <ActionButton
               href={whatsappUrl(MENSAJES.mayorista)}
