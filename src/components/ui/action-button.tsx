@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import { externalClick } from "@/config/site";
 
 type Variant = "gold" | "outline" | "whatsapp";
 type Size = "md" | "lg" | "xl";
@@ -44,6 +45,7 @@ export function ActionButton({
     <a
       href={href}
       aria-label={ariaLabel}
+      {...(external ? { onClick: externalClick(href) } : {})}
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       className={cn(base, variants[variant], sizes[size], className)}
     >

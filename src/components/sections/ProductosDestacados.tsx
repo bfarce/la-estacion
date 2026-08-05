@@ -43,7 +43,7 @@ export function ProductosDestacados() {
         )}
 
         <div className="mt-14 text-center">
-          <ActionButton href={whatsappUrl(MENSAJES.cotizacion)} variant="outline" size="lg">
+          <ActionButton href={whatsappUrl(MENSAJES.catalogo)} variant="outline" size="lg">
             Solicitar catálogo completo
           </ActionButton>
         </div>
