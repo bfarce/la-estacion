@@ -1,24 +1,70 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import { FloatingWhatsApp } from "@/components/layout/FloatingWhatsApp";
+import { Hero } from "@/components/sections/Hero";
+import { Categorias } from "@/components/sections/Categorias";
+import { ProductosDestacados } from "@/components/sections/ProductosDestacados";
+import { Mayoristas } from "@/components/sections/Mayoristas";
+import { PorQueElegirnos } from "@/components/sections/PorQueElegirnos";
+import { Nosotros } from "@/components/sections/Nosotros";
+import { Testimonios } from "@/components/sections/Testimonios";
+import { Faq } from "@/components/sections/Faq";
+import { CtaFinal } from "@/components/sections/CtaFinal";
+import { SITE } from "@/config/site";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const TITLE = "Licorera Selecta | Licores al por mayor y al detal";
+const DESCRIPTION =
+  "Catálogo premium de licores nacionales e importados. Whisky, ron, vodka, vinos y champañas al por mayor y al detal. Cotiza por WhatsApp en minutos.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LiquorStore",
+          name: SITE.nombre,
+          description: DESCRIPTION,
+          telephone: SITE.telefono,
+          email: SITE.email,
+          address: { "@type": "PostalAddress", streetAddress: SITE.direccion },
+          openingHours: "Mo-Sa 09:00-22:00",
+        }),
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background">
+      <Navbar />
+      <main>
+        <Hero />
+        <Categorias />
+        <ProductosDestacados />
+        <Mayoristas />
+        <PorQueElegirnos />
+        <Nosotros />
+        <Testimonios />
+        <Faq />
+        <CtaFinal />
+      </main>
+      <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 }
