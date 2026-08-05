@@ -3,12 +3,12 @@
  * Cambiar aquí el número de WhatsApp y los datos de contacto.
  */
 export const SITE = {
-  nombre: "Licorera Selecta",
+  nombre: "La Estación",
   eslogan: "Distribución premium de licores nacionales e importados",
-  whatsapp: "573001234567", // solo dígitos, con código de país
-  email: "ventas@licoreraselecta.com",
-  telefono: "+57 300 123 4567",
-  direccion: "Cra. 45 # 26-18, Bogotá D.C. (dirección de ejemplo)",
+  whatsapp: "573123526566", // solo dígitos, con código de país
+  email: "ventas@laestacion.com",
+  telefono: "+57 312 352 6566",
+  direccion: "Carrera 15 # 19B 04 SUR, Pitalito",
   horario: "Lun - Sáb: 9:00 a.m. - 10:00 p.m. · Dom: 11:00 a.m. - 8:00 p.m.",
   redes: {
     instagram: "https://instagram.com",
