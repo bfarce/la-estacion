@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Menu, X, MessageCircle, Wine } from "lucide-react";
+import { Menu, X, MessageCircle } from "lucide-react";
+import logoAsset from "@/assets/logo-la-estacion.png.asset.json";
 import { ActionButton } from "@/components/ui/action-button";
 import { MENSAJES, SITE, whatsappUrl } from "@/config/site";
 import { cn } from "@/lib/utils";
@@ -35,17 +36,17 @@ export function Navbar() {
         className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-5 lg:px-8"
       >
         <a href="#inicio" className="flex min-w-0 items-center gap-3">
-          <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-gold/40 bg-gold/10">
-            <Wine className="h-5 w-5 text-gold" aria-hidden="true" />
-          </span>
-          <span className="min-w-0">
-            <span className="block truncate font-display text-lg leading-none tracking-wide text-foreground">
-              {SITE.nombre}
-            </span>
-            <span className="hidden text-[0.65rem] uppercase tracking-[0.28em] text-gold sm:block">
-              Distribución premium
-            </span>
-          </span>
+          <img
+            src={logoAsset.url}
+            alt={`Logo de ${SITE.nombre} Licorera`}
+            width={200}
+            height={136}
+            className={cn(
+              "w-auto shrink-0 object-contain transition-all duration-500 drop-shadow-[0_4px_14px_oklch(0_0_0/0.55)]",
+              scrolled ? "h-12 sm:h-14" : "h-16 sm:h-20",
+            )}
+          />
+          <span className="sr-only">{SITE.nombre}</span>
         </a>
 
         <div className="hidden items-center gap-9 lg:flex">
