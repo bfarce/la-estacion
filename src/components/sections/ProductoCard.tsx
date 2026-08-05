@@ -40,7 +40,7 @@ export function ProductoCard({ producto, index = 0 }: { producto: Producto; inde
           {producto.descripcion}
         </p>
 
-        <div className="mt-6 flex items-end justify-between gap-3 border-t border-border/70 pt-5">
+        <div className="mt-auto flex items-end justify-between gap-3 border-t border-border/70 pt-5">
           <div>
             <p className="text-[0.65rem] uppercase tracking-[0.22em] text-muted-foreground">
               Precio desde
