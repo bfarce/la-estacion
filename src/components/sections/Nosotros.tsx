@@ -30,7 +30,7 @@ export function Nosotros() {
             align="left"
             eyebrow="Nosotros"
             title="Una casa dedicada al buen licor"
-            description="Nacimos como una pequeña tienda de barrio y hoy somos distribuidores de licores nacionales e importados para clientes al detal y al por mayor."
+            description="En La Estación seleccionamos licores nacionales e importados para atender a clientes al detal y al por mayor con asesoría personalizada."
           />
           <div className="mt-8 space-y-5 text-sm leading-relaxed text-muted-foreground sm:text-base">
             <p>
