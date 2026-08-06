@@ -58,7 +58,7 @@ export function Hero() {
             {[
               { k: "+500", v: "Referencias" },
               { k: "100%", v: "Asesoría personalizada" },
-              { k: "24 h", v: "Cotización inmediata" },
+              { k: "WhatsApp", v: "Cotización en minutos" },
             ].map((s) => (
               <div key={s.v}>
                 <dt className="font-display text-2xl text-gold sm:text-3xl">{s.k}</dt>

@@ -11,7 +11,7 @@ export const SITE = {
   email: "laestacionpitalito2025@gmail.com",
   telefono: "+57 312 352 6566",
   direccion: "Carrera 15 # 19B 04 SUR, Pitalito",
-  horario: "Lun - Jue: 9:00 a.m. - 9:00 p.m. · Vie - Sáb y festivos: 10:00 a.m. - 12:00 a.m.",
+  horario: "Lun - Jue: 9:00 a.m. - 9:00 p.m. · Vie - Sáb y festivos: 10:00 a.m. - media noche",
   redes: {
     instagram: "https://instagram.com",
     facebook: "https://facebook.com",
