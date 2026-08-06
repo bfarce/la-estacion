@@ -392,3 +392,31 @@
   transform: none;
   filter: blur(0);
 }
+
+/* Brillo diagonal al pasar el cursor sobre tarjetas */
+@utility sheen-hover {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+    background: linear-gradient(
+      100deg,
+      transparent 38%,
+      color-mix(in oklab, var(--gold-soft) 20%, transparent) 50%,
+      transparent 62%
+    );
+    transform: translateX(-120%) skewX(-18deg);
+    opacity: 0;
+  }
+
+  &:hover::before,
+  &:focus-visible::before {
+    opacity: 1;
+    animation: sheen 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
