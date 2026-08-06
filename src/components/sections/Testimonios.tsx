@@ -59,7 +59,7 @@ function Testimonio({
   texto: string;
   index: number;
 }) {
-  const reveal = useReveal<HTMLLIElement>(index * 80);
+  const reveal = useReveal<HTMLLIElement>({ delay: index * 100, variant: "scale" });
   return (
     <li ref={reveal.ref} className={`card-premium rounded-2xl p-8 ${reveal.className}`}>
       <Quote className="h-8 w-8 text-gold/50" aria-hidden="true" />

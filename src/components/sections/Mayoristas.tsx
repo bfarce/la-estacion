@@ -28,7 +28,7 @@ export function Mayoristas() {
         loading="lazy"
         width={1280}
         height={900}
-        className="absolute inset-0 h-full w-full object-cover opacity-15"
+        className="ken-burns absolute inset-0 h-full w-full object-cover opacity-15"
       />
       <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
         <div ref={reveal.ref} className={reveal.className}>
@@ -42,12 +42,13 @@ export function Mayoristas() {
 
         <div className="mt-16 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
           <ul className="grid gap-4 sm:grid-cols-2">
-            {BENEFICIOS.map(({ icon: Icon, titulo, texto }) => (
+            {BENEFICIOS.map(({ icon: Icon, titulo, texto }, i) => (
               <li
                 key={titulo}
-                className="card-premium flex gap-4 rounded-2xl p-5 backdrop-blur-sm sm:p-6"
+                className="card-premium sheen-hover animate-fade-up flex gap-4 rounded-2xl p-5 backdrop-blur-sm sm:p-6"
+                style={{ animationDelay: `${i * 90}ms` }}
               >
-                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-gold/30 bg-gold/10 text-gold">
+                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-gold/30 bg-gold/10 text-gold transition-all duration-500 group-hover:scale-110">
                   <Icon className="h-5 w-5" aria-hidden="true" />
                 </span>
                 <div className="min-w-0">

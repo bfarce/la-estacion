@@ -42,7 +42,7 @@ function Razon({
   texto: string;
   index: number;
 }) {
-  const reveal = useReveal<HTMLLIElement>(index * 70);
+  const reveal = useReveal<HTMLLIElement>({ delay: index * 90, variant: "up" });
   return (
     <li ref={reveal.ref} className={`card-premium group rounded-2xl p-8 ${reveal.className}`}>
       <span className="grid h-14 w-14 place-items-center rounded-2xl border border-gold/25 bg-gold/8 text-gold transition-all duration-500 group-hover:scale-105 group-hover:bg-gold group-hover:text-primary-foreground">

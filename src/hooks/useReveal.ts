@@ -1,7 +1,26 @@
 import { useEffect, useRef, useState } from "react";
 
-/** Revela un elemento al entrar en viewport (fade + slide up). */
-export function useReveal<T extends HTMLElement = HTMLDivElement>(delay = 0) {
+export type RevealVariant = "up" | "scale" | "left" | "right";
+
+type RevealOptions = {
+  delay?: number;
+  variant?: RevealVariant;
+};
+
+const VARIANTS: Record<RevealVariant, string> = {
+  up: "reveal-up",
+  scale: "reveal-scale",
+  left: "reveal-left",
+  right: "reveal-right",
+};
+
+/** Revela un elemento al entrar en viewport (fade + desplazamiento + desenfoque). */
+export function useReveal<T extends HTMLElement = HTMLDivElement>(
+  options: number | RevealOptions = 0,
+) {
+  const { delay = 0, variant = "up" } =
+    typeof options === "number" ? { delay: options } : options;
+
   const ref = useRef<T | null>(null);
   const [visible, setVisible] = useState(false);
 
@@ -16,7 +35,7 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>(delay = 0) {
           obs.disconnect();
         }
       },
-      { threshold: 0.15, rootMargin: "0px 0px -60px 0px" },
+      { threshold: 0.12, rootMargin: "0px 0px -60px 0px" },
     );
     obs.observe(el);
     return () => {
@@ -25,5 +44,11 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>(delay = 0) {
     };
   }, [delay]);
 
-  return { ref, className: visible ? "reveal reveal-visible" : "reveal" };
+  const base = VARIANTS[variant];
+
+  return {
+    ref,
+    visible,
+    className: visible ? `${base} reveal-in` : base,
+  };
 }
