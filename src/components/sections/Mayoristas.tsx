@@ -28,7 +28,7 @@ export function Mayoristas() {
         loading="lazy"
         width={1280}
         height={900}
-        className="absolute inset-0 h-full w-full object-cover opacity-15"
+        className="ken-burns absolute inset-0 h-full w-full object-cover opacity-15"
       />
       <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
         <div ref={reveal.ref} className={reveal.className}>

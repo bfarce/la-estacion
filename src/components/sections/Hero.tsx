@@ -11,7 +11,7 @@ export function Hero() {
         alt="Interior de una licorería moderna con botellas premium iluminadas en tonos cálidos"
         width={1920}
         height={1280}
-        className="absolute inset-0 h-full w-full object-cover"
+        className="ken-burns absolute inset-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 bg-[linear-gradient(100deg,oklch(0.1_0_0/0.94)_0%,oklch(0.1_0_0/0.78)_45%,oklch(0.1_0_0/0.5)_100%)]" />
       <div className="absolute inset-x-0 bottom-0 h-40 bg-[linear-gradient(to_top,var(--background),transparent)]" />
