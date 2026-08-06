@@ -42,7 +42,7 @@ function CategoriaCard({
   descripcion: string;
   index: number;
 }) {
-  const reveal = useReveal<HTMLLIElement>(index * 60);
+  const reveal = useReveal<HTMLLIElement>({ delay: index * 80, variant: "scale" });
   return (
     <li ref={reveal.ref} className={reveal.className}>
       <a
@@ -50,7 +50,7 @@ function CategoriaCard({
         onClick={externalClick(whatsappUrl(MENSAJES.categoria(nombre)))}
         target="_blank"
         rel="noopener noreferrer"
-        className="card-premium group relative flex h-40 flex-col justify-end overflow-hidden rounded-2xl p-5 sm:h-52 sm:p-7"
+        className="card-premium sheen-hover group relative flex h-40 flex-col justify-end overflow-hidden rounded-2xl p-5 sm:h-52 sm:p-7"
       >
         <span
           aria-hidden="true"
